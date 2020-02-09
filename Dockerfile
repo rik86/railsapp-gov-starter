@@ -1,19 +1,17 @@
-FROM ruby:2.6.3-stretch
+FROM ruby:2.6.3
+RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
+RUN mkdir /myapp
+WORKDIR /myapp
+COPY Gemfile /myapp/Gemfile
+COPY Gemfile.lock /myapp/Gemfile.lock
+RUN bundle install
+COPY . /myapp
 
-# Copy application code
-COPY . /application
-# Change to the application's directory
-WORKDIR /application
+# Add a script to be executed every time the container starts.
+COPY entrypoint.sh /usr/bin/
+RUN chmod +x /usr/bin/entrypoint.sh
+ENTRYPOINT ["entrypoint.sh"]
+EXPOSE 3000
 
-# Set Rails environment to production
-ENV RAILS_ENV production
-
-# Install gems, nodejs and precompile the assets
-RUN bundle install --deployment --without development test \
-    && curl -sL https://deb.nodesource.com/setup_10.x | bash - \
-    && apt install -y nodejs
-
-RUN npm install
-
-# Start the application server
-ENTRYPOINT ['bundle exec rails server']
+# Start the main process.
+CMD ["rails", "server", "-b", "0.0.0.0"]
