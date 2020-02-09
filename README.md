@@ -17,4 +17,5 @@ It covers:
 * Tests configuration (TODO)
 
 
-You can run the demo here: 
+# Live demo
+You can browse the demo here: https://rails-gov-uk-starter.herokuapp.com/
