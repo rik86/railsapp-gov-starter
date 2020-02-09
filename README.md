@@ -14,5 +14,7 @@ It covers:
 
 * Docker compose file (TODO)
 
+* Tests configuration (TODO)
+
 
 You can run the demo here: 
