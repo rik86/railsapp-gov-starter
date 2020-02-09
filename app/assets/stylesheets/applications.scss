@@ -2,7 +2,7 @@
 
 $govuk-global-styles: true;
 // Include images from /images/govuk-frontend and fonts from /fonts
-$govuk-images-path: "assets/images/";
-$govuk-fonts-path: "assets/fonts/";
+$govuk-images-path: "images/";
+$govuk-fonts-path: "fonts/";
 
 @import "govuk-frontend/govuk/all";
