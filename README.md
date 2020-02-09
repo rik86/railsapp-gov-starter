@@ -1,24 +1,18 @@
-# README
+# Rails GOV.UK Starter project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a starter project for Ruby on Rails uwing the GOV.UK Design System (https://design-system.service.gov.uk/get-started).
 
-Things you may want to cover:
-
-* Ruby version
+It covers:
 
 * System dependencies
 
-* Configuration
+* GOV.UK `govuk-frontend:3.5.0` library
 
-* Database creation
+* GOV.UK Assets and Fonts configuration
 
-* Database initialization
+* Base Docker image (TODO)
 
-* How to run the test suite
+* Docker compose file (TODO)
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
+You can run the demo here: 
