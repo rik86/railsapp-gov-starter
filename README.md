@@ -17,5 +17,9 @@ It covers:
 * Tests configuration (TODO)
 
 
+# Run locally
+`docker-compose build`
+`docker-compose up`
+
 # Live demo
 You can browse the demo here: https://rails-gov-uk-starter.herokuapp.com/
