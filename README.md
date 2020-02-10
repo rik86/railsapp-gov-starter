@@ -18,4 +18,4 @@ It covers:
 `docker-compose up`
 
 # Example
-![Alt text](/screenshot.png?raw=true "Home page")
+https://rails-gov-uk-starter.herokuapp.com/
