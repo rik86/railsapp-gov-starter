@@ -10,11 +10,7 @@ It covers:
 
 * GOV.UK Assets and Fonts configuration
 
-* Base Docker image (TODO)
-
-* Docker compose file (TODO)
-
-* Tests configuration (TODO)
+* Docker image
 
 
 # Run locally
