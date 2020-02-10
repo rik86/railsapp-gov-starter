@@ -1,19 +1,26 @@
 version: '3'
 services:
 
-  db:
-    image: postgres
-    volumes:
-      - ./tmp/db:/var/lib/postgresql/data
-
-  web:
-    build: .
-    # command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+  postgres-db:
+    image: postgres:9.6
+    ports:
+      - "5435:5432"
     environment:
-      
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=postgres
+
+  rails-govuk-app:
+    build: .
+    environment:
+      - DATABASE_NAME=postgres
+      - DATABASE_USERNAME=postgres
+      - DATABASE_PASSWORD=1234
+      - DATABASE_HOST=postgres-db
+      - DATABASE_PORT=5432
     volumes:
       - .:/myapp
     ports:
       - "3000:3000"
     depends_on:
-      - db
+      - postgres-db
