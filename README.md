@@ -21,5 +21,5 @@ It covers:
 `docker-compose build`
 `docker-compose up`
 
-# Live demo
-You can browse the demo here: https://rails-gov-uk-starter.herokuapp.com/
+# Example
+![Alt text](/screenshot.png?raw=true "Home page")
